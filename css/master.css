@@ -38,6 +38,7 @@ header {
 .login {
   position: absolute; right: 10px;
   display: inline-block;
+  visibility: hidden;
 
 }
 
@@ -55,7 +56,7 @@ header {
   color: #FFFFFF;
 }
 
-.login button[type=submit] {
+.login button {
   vertical-align: top;
   margin: 10px 0px;
   border: none;
@@ -66,7 +67,7 @@ header {
   color: #FFFFFF
 }
 
-.login button[type=submit]:hover {
+.login button:hover {
   background-color: #2A9FD6
 }
 
