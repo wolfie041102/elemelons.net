@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.png" />
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = '/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+    </script>
+    <title>Elemelons</title>
+  </head>
+  <body>
+    <!-- /* import header */ -->
+    <div data-include="header"></div>
+
+      <!-- /* main content */ -->
+    <main>
+
+      <!-- /* sidebar */ -->
+      <div class="sidebar-area">
+        <div class="sidebar">
+          <ul>
+            <li><a href="#how-join">How do i join:</a></li>
+            <li><a href="#how-roleplay">How do I know what to roleplay:</a></li>
+            <li><a href="#downloads">A download link is broken/unavailable:</a></li>i>
+          </ul>
+          <p style="text-align: center; padding: 10px;" ><img style=" max-width: 300px; max-height: 300px; width: 100%; height: 100%;" src="/pictures/logo-128x128.png"></p>
+        </div>
+      </div>
+
+      <!-- /* content */ -->
+      <div class="content">
+
+          <div class="section">
+            <span class="anchor" id="how-join"></span>
+            <h3><li>How do I join?</li></h2>
+            <div class="line"></div>
+            <p>Since the server uses a whitelist, you’re allowed to join if one of the members invites you, and one of the owners approves.</p>
+            <h5>If you're whitelisted then follow these steps:</h5>
+            <ol>
+              <li>In Minecraft, go to multiplayer</li>
+              <li>Click “add server” at the bottom of your screen</li>
+              <li>Type "elemelons.net" in the Server Address field</li>
+              <li>Click create</li>
+            </ol>
+          </div>
+
+          <div class="section">
+            <span class="anchor" id="how-roleplay"></span>
+            <h3><li>How do I know what to roleplay:</li></h3>
+            <div class="line"></div>
+
+            <p>The roleplay on Elemelons is very open. All you have to do is create a character, and join the server! If you don’t know what to do with your character, you can always ask HadesTheImmortal, since he writes most of the scripts, and designed some characters you see on the server. For inspiration, you can find past roleplay events and story arcs on the site.</p>
+          </div>
+
+          <div  class="section">
+            <span class="anchor" id="downloads"></span>
+            <h3><li>A download link is broken/unavailable:</li></h3>
+            <div class="line"></div>
+            <ol>
+              <li>Try a other link or wait for the link to become available again.</li>
+              <li>Contact us with one of the methods in the contacts tab.</li>
+            </ol>
+          </div>
+
+        </div>
+
+      <!-- /* left colum */ -->
+      <div class="left-colum">
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/pictures/season3-pandemonium.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/pictures/season3-persephone.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/pictures/season3-chymes.jpg" style="width:100%">
+        </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div data-include="server-status"></div>
+      </div>
+
+    </main>
+
+    <!-- /* import footer */ -->
+    <div data-include="footer"></div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/page-height.js"></script>
+    <script src="/js/slideshow.js"></script>
+  </body>
+</html>

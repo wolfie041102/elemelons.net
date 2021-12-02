@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.png" />
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = '/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+    </script>
+    <title>Elemelons</title>
+  </head>
+  <body>
+    <!-- /* import header */ -->
+    <div data-include="header"></div>
+
+      <!-- /* main content */ -->
+    <main>
+
+      <!-- /* sidebar */ -->
+      <div class="sidebar-area">
+        <div class="sidebar">
+          <ul>
+            <li><a href="#maps">Maps:</a></li>
+            <li><a href="#resourcepacks">Resourcepacks:</a></li>
+          </ul>
+          <p style="text-align: center; padding: 10px;" ><img style=" max-width: 300px; max-height: 300px; width: 100%; height: 100%;" src="/pictures/logo-128x128.png"></p>
+        </div>
+      </div>
+
+      <!-- /* content */ -->
+      <div class="content">
+
+        <div class="section">
+          <span class="anchor" id="maps"></span>
+          <h2>Maps:</h2>
+          <p>Here you'll find the download links and seed of maps from previous seasons.
+          On how to install the worlds  <a href="https://minecraft.fandom.com/wiki/Tutorials/Map_downloads" target="_blank">Click here</a></p>
+          <h3>Season 1 (1.15.2)</h3>
+          <p>(7th June 2020 - 8th November 2020)</p>
+          <h5>Links:</h5>
+          <ul>
+            <li>google drive:	 <a href="https://drive.google.com/file/d/1m7bsHmYv1iX_BTAevmlfLwXWzVoVXYhV/view?usp=sharing" target="_blank">Download</a></li>
+            <li>MediaFire:	 <a href="https://www.mediafire.com/file/x3cpn83d9gqrmao/kd_world.zip/file" target="_blank">Download</a></li>
+            <li>Mega: 	 <a href="https://mega.nz/file/IEFmEZ7J#DSo-hyZ4FOCFDrDZ2E5zyBe-oAwiqKB4_1ToV2_8tcA" target="_blank">Download</a></li>
+          </ul>
+          <h5>Seed:</h5>
+          <div id="seed"><p>-8012191382563708044<p></div>
+          <div class="line"></div>
+
+          <h3>Season 2 (1.16.4)</h3>
+          <p>(8th November 2020 - 22th April 2021)</p>
+          <h5>Links:</h5>
+          <ul>
+            <li>google drive: <a href="https://drive.google.com/file/d/12JzSancq3oCpJmHl-ZNH7PiOfaok1oQN/view?usp=sharing" target="_blank">Download</a></li>
+            <li>MediaFire:	<a href="https://www.mediafire.com/file/0jl97wxmdsdima6/Elemelons-season-2.zip/file" target="_blank">Download</a></li>
+            <li>Mega:		<a href="https://mega.nz/file/UJFRSIwC#wFDTn9Q_i6z1HUA6X1NVcgZd3Cb3EphWhCeGkAE-pJk" target="_blank">Download</a></li>
+          </ul>
+          <h5>Seed:</h5>
+          <div id="seed"><p>-1269406964226038324<p></div>
+          <div class="line"></div>
+
+          <h3>Season 3 (1.16.5 - 1.17.1)</h3>
+          <p>(25th April 2021 - 30th November 2021)</p></br></br>
+          <p>The reason there for that there are 2 different maps comes down due to the fact season 3 technicly had 2 nethers dimesions the normal nether and pandemonium. And thats not possible in an normal singleplayer world.</br></br>
+              So in short in de normal map you get the normal nether and the map pandemonium the normal nether is replaced by pandemonium</p></br></br>
+          <h5>Links (Normal):</h5>
+          <ul>
+            <li>Google drive: <a href="https://drive.google.com/file/d/1qHXACBQhOPm-7tzbAuDLllA6OU5LXmwZ/view?usp=sharing" target="_blank">Download</a></li>
+            <li>Mega: <a href="https://mega.nz/file/hUkEyDaT#OQjAqfADxG7y01QF4tucMghcCBjWKrkEZxMoux0ucnU" target="_blank">Download</a></li>
+          </ul>
+          <h5>Links (pandemonium):</h5>
+          <ul>
+            <li>Google drive: <a href="https://drive.google.com/file/d/1kB8f3YkC1BvBMxFk-3-Uo6CyfMYcm7oA/view?usp=sharing" target="_blank">Download</a>
+            <li>Mega: <a href="https://mega.nz/file/xU1GWTDT#nNiTANgFK8rMz2YXFY6V9GYV05rmYvbJKd85GfPu5nA" target="_blank">Download</a></li>
+          </ul>
+
+          <h5>Seed:</h5>
+          <div id="seed"><p>-3450936858322299067<p></div>
+          <div class="line"></div>
+
+        </div>
+
+        <div class="section">
+          <span class="anchor" id="resourcepacks"></span>
+          <h2>Resourcepacks:</h2>
+          <p>Here you'll find the download links for the resourcepacks we use. on how to install resourcespacks <a href="https://minecraft.fandom.com/wiki/Tutorials/Loading_a_resource_pack" target="_blank">Click here</a></br></br>
+
+            The resourcepacks are not required to be able to play on the server but its highly recommended to use them to get the best roleplay experience.</p>
+          <h4>BetterVanillaBuilding</h4>
+          <p>All credits for the Texturepack goes to: <strong>stefanj2_</strong> for creating this resourcepack all we did was strip it down for better performance and added a few custom textures</p>
+          <div id="note"><p>Make sure you use optifine and have in:</br> options -> video settings -> quality settings -> custom items turned on </br></br> Download for Optifine:  <a href="https://optifine.net/downloads" target="_blank">Download</a></p></div>
+          <h5>original:</h5>
+          <p>- BetterVanillaBuilding: <a href="https://www.curseforge.com/minecraft/texture-packs/bettervanillabuilding/files" target="_blank">Download</a></p>
+          <h5>modified:</h5>
+          <p>- Elemelons-BetterVanillaBuilding:  <a href="/downloads/Elemelons-BetterVanillaBuilding.zip" target="_blank">Download</a></p>
+      </div>
+    </div>
+
+      <!-- /* left colum */ -->
+      <div class="left-colum">
+        <div data-include="server-status"></div>
+      </div>
+
+    </main>
+
+    <!-- /* import footer */ -->
+    <div data-include="footer"></div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/page-height.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.png" />
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = '/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+    </script>
+    <title>Elemelons</title>
+  </head>
+  <body>
+    <!-- /* import header */ -->
+    <div data-include="header"></div>
+
+      <!-- /* main content */ -->
+    <main>
+
+      <!-- /* sidebar */ -->
+      <div class="sidebar-area">
+        <div class="sidebar">
+          <ul>
+            <li><a href="#Elemelons">The Elemelons server:</a></li>
+            <li><a href="#news">News:</a></li>
+            <li><a href="#info">More info:</a></li>
+          </ul>
+          <p style="text-align: center; padding: 10px;" ><img style=" max-width: 300px; max-height: 300px; width: 100%; height: 100%;" src="/pictures/logo-128x128.png"></p>
+        </div>
+      </div>
+
+      <!-- /* content */ -->
+      <div class="content">
+        <div class="section">
+          <span class="anchor" id=Elemelons></span>
+          <h1>The Elemelons server:</h1>
+          <h2>Welcome to the Elemelons server!</h2>
+          <p>The Elemelons server is a survival Roleplay server for Minecraft, created by Wolfie041102 and HadesTheImmortal. On this server you will find a community that is absolutely addicted to Minecraft, and quite commited to the roleplay. The roleplay you will see on this server is NOT scripted, except for some general outlines on the main story. Feel free to join, build a base, meet the characters, and get involved in the roleplay! And most importanly, Have Fun!</p>
+        </div>
+
+        <div class="section">
+          <span class="anchor" id="news"></span>
+          <h1>News:</h1>
+        </div>
+
+        <div class="section">
+          <span class="anchor" id="info"></span>
+          <h1>More Info:</h1>
+          <h5>resourcepacks</h5>
+          <p>This server uses a modified version of the bettervanilla recourcepack. We have kept in only the armor, for roleplay and lag purposes. When naming the armor something different, it will show up different. To know what armors there are, visit their server; play.bettervanillabuilding.com. This texturepack is not essential, but it would elevate your roleplay experience. The download link for the pack can be found here<br><br>
+
+             During roleplay we may use some custom resourcepacks to add custom sounds/music to the game. When thats the case and you want to particpate in the roleplay scene make sure to download them for a better experience. The download links for the custom packs can also be found here.</p>
+
+          <h5>parties/balls</h5>
+          <p>Parties and balls will be a regular thing on Elemelons, with someone else organizing it every week. This will result in different themes every time! One week you might attend a very luxe and royal party, another week you might attend a laid-back garden party. If you really want to organize the next party, make sure to let us know!</p>
+
+          <h5>more info</h5>
+          <p>For more info on about how to join the server or for other information you can go to the FAQ tab or click here</p>
+        </div>
+
+      </div>
+
+      <!-- /* left colum */ -->
+      <div class="left-colum">
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/pictures/season3-pandemonium.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/pictures/season3-persephone.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/pictures/season3-chymes.jpg" style="width:100%">
+        </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div data-include="server-status"></div>
+
+      </div>
+
+
+  </main>
+    <!-- /* import footer */ -->
+    <div data-include="footer"></div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/slideshow.js"></script>
+    <script src="/js/page-height.js"></script>
+  </body>
+</html>
