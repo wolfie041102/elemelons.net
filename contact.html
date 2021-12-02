@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.png" />
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = '/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+    </script>
+    <title>Elemelons</title>
+  </head>
+  <body>
+    <!-- /* import header */ -->
+    <div data-include="header"></div>
+
+      <!-- /* main content */ -->
+    <main>
+
+      <!-- /* sidebar */ -->
+      <div class="sidebar-area">
+        <div class="sidebar">
+          <ul>
+            <li><a href="#roles">Roles:</a></li>
+            <li><a href="#methods">Methods:</a></li>
+          </ul>
+          <p style="text-align: center; padding: 10px;" ><img style=" max-width: 300px; max-height: 300px; width: 100%; height: 100%;" src="/pictures/logo-128x128.png"></p>
+        </div>
+      </div>
+
+      <!-- /* content */ -->
+      <div class="content">
+
+        <div class="section">
+          <span class="anchor" id="roles"></span>
+          <h2>Roles</h2>
+          <div class="line"></div>
+          <h3>Who do i need to speak to?</h3><br/>
+          <h5>- Chymes <i>(Wolfie041102)</i></h5>
+          <p>For all the technical questions and isseus you may have</p>
+          <h5>Hades <i>(HadesTheImmortal)</i></h5>
+          <p>For all roleplay and community related questions</p>
+        </div>
+
+        <div class="section">
+          <span class="anchor" id="methods"></span>
+          <h2>Contacting methods:</h2>
+          <div class="line"></div>
+          <h3>E-mail:</h3>
+          <p>WIP</p>
+          <h3>Social media:</h3>
+          <a href='https://instagram.com/elemelons_smp?utm_medium=copy_link' target="_blank"><img src="/pictures/instagram-logo.png" height="70px" width="70px"></a>
+          <h3>Discord:</h3>
+          <p>If you're already a member and joined our discord server then thats also a viable option for contacting us</p>
+        </div>
+
+      </div>
+
+      <!-- /* left colum */ -->
+      <div class="left-colum">
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/pictures/season3-pandemonium.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/pictures/season3-persephone.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/pictures/season3-chymes.jpg" style="width:100%">
+        </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div data-include="server-status"></div>
+      </div>
+
+    </main>
+
+    <!-- /* import footer */ -->
+    <div data-include="footer"></div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/page-height.js"></script>
+    <script src="/js/slideshow.js"></script>
+  </body>
+</html>
