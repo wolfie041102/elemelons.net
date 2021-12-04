@@ -1,8 +1,8 @@
 const init = function(){
   var checkExist = setInterval(function() {
-     if ($('#button-login').length) {
+     if ($('#create').length) {
         clearInterval(checkExist);
-        document.getElementById('button-login').addEventListener('click', send);
+        document.getElementById('create').addEventListener('click', send);
      }
   }, 100)
 }
@@ -20,16 +20,20 @@ const send = function(ev) {
 
 const validate = function(ev) {
   let username = document.getElementById('username').value;
-  let password = document.getElementById('password').value;
+  let group = document.getElementById('group').value;
+  console.log("username: " + username);
+  console.log("group: " + group);
 
   $.ajax({
-    type: "POST",
-    url: "/python/sensors.py",
-    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}, //Add this <----
-    success:function(result){
-      console.log(result);
+    url: 'http://localhost/python/create-user.py',
+    method: "post",
+    data: {username},
+    datatype: "text",
+    success: function(data){
+      console.log(data);
     },
   });
+
   return true;
 };
 

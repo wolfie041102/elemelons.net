@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/pictures/favicon.png" />
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = '/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+    </script>
+    <title>Elemelons</title>
+  </head>
+  <body>
+    <!-- /* import header */ -->
+    <div data-include="header"></div>
+
+      <!-- /* main content */ -->
+    <main>
+
+      <!-- /* sidebar */ -->
+      <div class="sidebar-area">
+        <div class="sidebar">
+          <ul>
+            <li><button id="Btn-home"  value="home">Home</button></li>
+            <li><button id="Btn-users"  value="users">Users</button></li>
+            <li><button id="Btn-something"  value="something">Something</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- /* content */ -->
+      <div class="content">
+
+        <div style="display:none;" id="home" class="section">
+          <h1>home:</h1>
+          <h2>Online players</h2>
+          <div data-include="online-players"></div>
+        </div>
+
+        <div style="display:none;" id="users" class="section">
+          <h1>Users:</h1>
+          <div class="create-user">
+            <button id="create-user" name="create-user">Create user</button>
+                <!-- The Modal -->
+
+                <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Create User</h2>
+                  </div>
+                  <div class="modal-body">
+
+                    <form class="create-form" method="post">
+                      <div class="rows">
+                        <div class="column">
+                          <label for="username">Username:</label>
+                          <input id="username" type="text" name="username" placeholder="username" autocomplete="off"/></br>
+                        </div>
+                        <div class="column">
+                          <label for="password">Password:</label>
+                          <input id="password" type="password" name="password" placeholder="password" autocomplete="new-password"/></br>
+                        </div>
+                        <div class="column">
+                          <label for="group">Group:</label>
+                          <select id="group" name="group">
+                            <option value="VIP">VIP</option>
+                            <option value="FSW">FSW</option>
+                            <option value="Admin">Admin</option>
+                          </select></br>
+                        </div>
+                    </div>
+
+                      <button id="create" type="button" name="create">Create</button>
+
+                    </form>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+
+          <div data-include="admin/users"></div>
+        </div>
+
+        <div style="display:none;" id="something" class="section">
+          <h1>Something:</h1>
+        </div>
+
+      </div>
+
+      <!-- /* left colum */ -->
+      <div class="left-colum">
+
+        <div data-include="server-status"></div>
+
+      </div>
+
+    </main>
+
+    <!-- /* import footer */ -->
+    <div data-include="footer"></div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/page-height.js"></script>
+    <script src="/js/toggle-button.js"></script>
+    <script src="/js/create-user.js"></script>
+  </body>
+</html>
