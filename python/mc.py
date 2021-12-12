@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 from mcstatus import MinecraftServer
 import re, socket
 
@@ -14,8 +14,8 @@ try:
 except ConnectionRefusedError:
     data = "Online players: 0"
     latency = 'offline'
-  
-    
+
+
 
 if latency == 'offline':
     server_status = "<p>Server = <span style=\"color: red\">Offline</span></p>"

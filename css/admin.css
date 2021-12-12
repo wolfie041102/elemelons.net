@@ -34,44 +34,6 @@ header {
   color: #FFF;
 }
 
-/* Login in header */
-.login {
-  position: absolute; right: 10px;
-  display: inline-block;
-  visibility: hidden;
-
-}
-
-.login input {
-  height: 30px;
-  width: 85px;
-  margin: 10px 0px;
-  background-color: #060606;
-  border: none;
-  outline: 1px solid #282828
-}
-
-.login input[type=text], input[type=password] {
-  font-size: 17px;
-  color: #FFFFFF;
-}
-
-.login button {
-  vertical-align: top;
-  margin: 10px 0px;
-  border: none;
-  height: 32px;
-  width: 60px;
-  background-color: #216f94;
-  cursor: pointer;
-  color: #FFFFFF
-}
-
-.login button:hover {
-  background-color: #2A9FD6
-}
-
-
 /* menu */
 nav {
   position: absolute; top: 0; left: 50%;
@@ -189,7 +151,7 @@ main {
 }
 
 .sidebar li {
-  padding: 10px 0px 10px 10px;
+  padding: 10px;
   margin: 0;
   font-size: 20px;
   border-bottom: 1px solid #383838;
@@ -208,6 +170,20 @@ main {
   font-weight: bold !important;
 }
 
+.sidebar button {
+  width: 100%;
+  font-size: 20px;
+  color: #999999;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  color: #FFFFFF;
+}
+
+
 /* content */
 .content {
   min-height: 100%;
@@ -222,6 +198,7 @@ main {
   padding: 10px;
   min-height: 300px;
   padding-bottom: 40px;
+
 }
 
 .section h1 {
@@ -268,6 +245,55 @@ main {
   color: #854a96;
 }
 
+.section button {
+  border: 2px solid #333333;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.section button:hover {
+  color: #FFFFFF;
+  background-color: #2A9FD6;
+}
+
+.rows {
+  display: block;
+  width: 100%;
+}
+
+.column {
+  display: inline-block;
+  width: 50%;
+  padding: 20px;
+}
+
+.create-form label {
+  float: left;
+  width: 24%;
+  font-size: 20px;
+}
+
+.create-form input {
+  float: left;
+  width: 60%;
+  font-size: 20px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #999999;
+}
+
+.create-form select {
+  float: left;
+  width: 61.7%;
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
 .anchor {
   display: block;
   min-height: 52px; /*same height as header*/
@@ -283,7 +309,6 @@ main {
 .line {
   border-bottom: 1px solid #282828;
   margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .content summary {
@@ -433,4 +458,76 @@ footer > p {
   padding: 15px;
   background-color: #060606;
   text-align: right
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #222222;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #216f94;
+  color: white;
+}
+
+.modal-body {
+  padding: 8px 16px;
+  min-height: 200px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #216f94;
+  color: white;
 }
