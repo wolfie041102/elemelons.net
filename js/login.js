@@ -25,9 +25,9 @@ const validate = function(ev) {
   console.log("group: " + group);
 
   $.ajax({
-    url: 'http://localhost/python/create-user.py',
+    url: '/python/create-user.py',
     method: "post",
-    data: {username},
+    data: {message_py : username},
     datatype: "text",
     success: function(data){
       console.log(data);
