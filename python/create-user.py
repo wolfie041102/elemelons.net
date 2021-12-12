@@ -1,10 +1,23 @@
-#!/usr/bin/python3
-import cgi
+from flask import Flask, render_template, request, jsonfy
 
-print("testing"),
+app = Flask(__name__)
 
-form = cgi.FieldStorage()
+@app.route('/')
+def index():
+    return render_template('FAQ.html')
 
-message = form.cgi.getvalue("username")
+@app.route('/proccess', methods=['POST']')
+def proccess():
 
-print()
+    username = request.form['username']
+	group = request.form['group']
+
+    if group and username:
+		newName = username[::-1]
+
+		return jsonify({'name' : newName})
+
+	return jsonify({'error' : 'Missing data!'}
+
+if __name__ == '__main__':
+    app.run(debug=True)
