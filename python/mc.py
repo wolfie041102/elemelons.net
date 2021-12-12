@@ -22,7 +22,7 @@ if latency == 'offline':
 else:
     server_status = "<p>Server = <span style=\"color: green\">Online</span></p>"
 
-with open("/usr/share/nginx/elemelons.net/" + 'server-status.html', 'r+') as file:
+with open("/var/www/elemelons.net/" + 'server-status.html', 'r+') as file:
     text = file.read()
     text = re.sub('Online players: \d{1,2}', data, text)
     text = re.sub('<p>Server = <span style=\"color: (red|green)\">(Online|Offline)</span></p>', server_status, text)
